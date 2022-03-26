@@ -3,7 +3,11 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-kapt'
+   // id 'kotlin-android-extensions'
 }
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
 
 android {
@@ -35,6 +39,12 @@ android {
                 "-Xjvm-default=all",
         ]
     }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
 }
 
 dependencies {

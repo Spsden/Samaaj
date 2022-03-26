@@ -15,7 +15,11 @@
             app:destination="@id/viewContact" />
         <action
             android:id="@+id/action_homeFragment_to_createContacts"
-            app:destination="@id/createContacts" />
+            app:destination="@id/createContacts"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/createContacts"

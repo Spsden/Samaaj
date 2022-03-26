@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.androclass.R
-
+import com.example.androclass.databinding.FragmentHomeBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class HomeFragment : Fragment() {
+
+    private lateinit var binding: FragmentHomeBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +28,23 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+        return binding.root
+        //eturn inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val createButton = binding.createFloat
+
+        createButton.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToCreateContacts())
+        }
+
+
+
+
     }
 
     companion object {

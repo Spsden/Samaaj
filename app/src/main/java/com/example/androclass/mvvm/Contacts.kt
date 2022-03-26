@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey
 data class Contacts(
 
     @PrimaryKey(autoGenerate = true)
-    val id : Int,
+    val id : Int?,
 
     val firstName : String,
     val secondName : String,

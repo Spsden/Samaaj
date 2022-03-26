@@ -66,6 +66,8 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/first_name"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="First name"
@@ -79,6 +81,8 @@
 
             </EditText>
             <EditText
+                android:id="@+id/last_name"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Last name"
@@ -94,6 +98,8 @@
             </EditText>
 
             <EditText
+                android:id="@+id/mob_num"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Mobile number"
@@ -107,6 +113,8 @@
             </EditText>
 
             <EditText
+                android:id="@+id/email"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="E-mail"
@@ -119,6 +127,7 @@
 
             </EditText>
             <EditText
+                android:id="@+id/additional_info"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:hint="Additional info"
@@ -142,6 +151,7 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="80dp"
+        android:id="@+id/save_contact_float"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:gravity="center"

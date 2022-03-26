@@ -9,6 +9,7 @@
     tools:context=".fragments.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:liftOnScroll="true"
@@ -73,6 +74,7 @@
         >
 
         <androidx.recyclerview.widget.RecyclerView
+
             android:layout_width="match_parent"
             tools:listitem="@layout/rvcard"
             android:layout_height="match_parent">
@@ -82,10 +84,15 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/create_float"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:gravity="center"
         android:text="Create +"
+
+
 
         android:textColor="@color/white"
         android:backgroundTint="@color/thisblue"
