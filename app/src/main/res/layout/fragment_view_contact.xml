@@ -1,14 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.ViewContact">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="contact_name"
+            type="String" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/thisblack"
 
-</FrameLayout>
+        tools:context=".fragments.ViewContact">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:liftOnScroll="true"
+            android:fitsSystemWindows="true"
+            android:id="@+id/app_bar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:background="@color/thisblack"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginStart="20dp"
+                app:expandedTitleGravity="bottom"
+
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:title="@{contact_name}">
+
+                <TextView
+                    android:id="@+id/textViewCollapsing"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/circlulartextview"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="S"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="65sp"
+                    android:gravity="center"
+                    app:layout_collapseMode="parallax"
+
+                    android:textColor="@color/white">
+
+                </TextView>
+
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewCollapsing"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginBottom="5dp"-->
+
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:background="@drawable/circlulartextview"-->
+<!--                    app:layout_collapseMode="parallax" />-->
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:minHeight="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fillViewport="true"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="2dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mobile_num"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="mob num"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+
+
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+
+                    android:layout_margin="8dp"
+
+
+                    android:textColorHint="@color/material_dynamic_secondary50">
+
+
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+
+                    android:layout_margin="10dp"
+                    android:background="@color/thisblue"
+              />
+
+                <TextView
+                    android:id="@+id/email"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="email"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:layout_margin="8dp"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+
+
+
+
+                    android:textColorHint="@color/material_dynamic_secondary50">
+
+
+
+                </TextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="10dp"
+
+                    android:background="@color/thisblue"
+                    />
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/additional_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Additional info"
+                    android:padding="5dp"
+                    android:layout_margin="8dp"
+                    android:paddingStart="10dp"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+
+
+                    android:textColorHint="@color/material_dynamic_secondary50">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+<!--        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--            android:layout_width="80dp"-->
+<!--            android:id="@+id/save_contact_float"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|end"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:text="Save">-->
+
+<!--        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>-->
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

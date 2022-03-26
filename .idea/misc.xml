@@ -8,8 +8,9 @@
         <entry key="..\:/New folder (2)/app/src/main/res/drawable/roundedsearchview.xml" value="0.1" />
         <entry key="..\:/New folder (2)/app/src/main/res/layout/activity_main.xml" value="0.25271739130434784" />
         <entry key="..\:/New folder (2)/app/src/main/res/layout/fragment_create_contacts.xml" value="0.1" />
-        <entry key="..\:/New folder (2)/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/New folder (2)/app/src/main/res/layout/rvcard.xml" value="0.19555555555555557" />
+        <entry key="..\:/New folder (2)/app/src/main/res/layout/fragment_home.xml" value="0.2222222222222222" />
+        <entry key="..\:/New folder (2)/app/src/main/res/layout/fragment_view_contact.xml" value="0.29333333333333333" />
+        <entry key="..\:/New folder (2)/app/src/main/res/layout/rvcard.xml" value="0.4444444444444444" />
       </map>
     </option>
   </component>

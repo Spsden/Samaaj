@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_viewContact"
-            app:destination="@id/viewContact" />
+            app:destination="@id/viewContact"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment_to_createContacts"
             app:destination="@id/createContacts"
@@ -38,5 +42,9 @@
         <action
             android:id="@+id/action_viewContact_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

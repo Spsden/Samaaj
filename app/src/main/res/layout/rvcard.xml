@@ -20,19 +20,25 @@
         >
 
         <TextView
+            android:id="@+id/first_letter"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:background="@drawable/circlulartextview"
             android:padding="10dp"
             android:text="S"
+            android:textSize="15sp"
+            android:gravity="center"
+
             android:textColor="@color/white">
 
         </TextView>
 
         <TextView
+            android:id="@+id/full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:textSize="20sp"
             android:text="Suraj Pratap Singh"
 
 

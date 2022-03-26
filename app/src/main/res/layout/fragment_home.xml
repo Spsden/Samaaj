@@ -33,14 +33,17 @@
 
 
             <androidx.appcompat.widget.SearchView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                app:queryHint="Search"
+                android:padding="5dp"
+
                 android:layout_marginRight="10dp"
-                android:layout_gravity="bottom"
+                android:layout_gravity="bottom|end"
+                android:backgroundTint="@color/thisblue"
 
 
-                android:background="@drawable/roundedsearchview"
                 >
 
             </androidx.appcompat.widget.SearchView>
@@ -77,6 +80,7 @@
 
             android:layout_width="match_parent"
             tools:listitem="@layout/rvcard"
+            android:id="@+id/main_rv"
             android:layout_height="match_parent">
 
         </androidx.recyclerview.widget.RecyclerView>

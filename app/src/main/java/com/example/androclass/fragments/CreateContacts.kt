@@ -83,6 +83,7 @@ class CreateContacts : Fragment() {
                 mobileNumber = mobileNum
             )
 
+
             viewModel.insertContacts(contact)
 
             Toast.makeText(activity?.applicationContext,"Contact created successfully",Toast.LENGTH_LONG).show()
